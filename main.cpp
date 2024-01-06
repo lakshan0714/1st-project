@@ -1,7 +1,9 @@
 #include<iostream>
 //#include<customer.h>
-#include "administer.h"
-//#include<Employee.h>
+#include "administer.cpp"
+#include "Employee.cpp"
+#include "customer.cpp"
+
 
 using namespace std;
 
@@ -30,10 +32,11 @@ int main()
           		
           		break;
           	case 2:
-          	  cout<<"Employee";
-          	  break;
+          	     Employee_function();
+          	     break;
           	case 3:
-          		cout<<"Coustomer";
+          		customer_function();
+          		break;
           	default:
           		cout<<"invalid";
           		
