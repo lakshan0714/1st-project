@@ -160,13 +160,12 @@ private:
         }
     }
 };
-
-int main() {
-    // Example: Customer Operations
-    string customerPassword = "Password@1234";
+void customer_function()
+{
+	string customerPassword = "Password@1234";
 
     Customer customer(0, customerPassword);
     customer.customerOperations();
-
-    return 0;
 }
+
+
