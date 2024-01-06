@@ -3,6 +3,8 @@
 #include<string>
 #include<windows.h>
 
+
+
 #ifdef _WIN32
     #include <direct.h> // For _mkdir on Windows
 #else
@@ -41,7 +43,7 @@ class Adminster{
 			if(name.length()>=8&&name.substr(0,8)=="Employee")
 			{
 				    cout<<"Employee Succesfully created"<<endl;
-					ofstream out1(folderName+"/"+name+"_.text");
+					ofstream out1(folderName+"/"+name);
 			
 		         	out1<<name<<endl;
 		        	out1<<password<<endl;
@@ -66,6 +68,16 @@ class Adminster{
 			cin>>OverdraftCharge;
 			cout<<"Succesfully set the intrest rate and overdraft values"<<endl;
 			system("CLS");
+		}
+		
+		void calculate_intrest_for_Savings()
+		{
+			
+		}
+		
+		void calculate_penalty_for_Overdraft()
+		{
+			
 		}
 		
 		
@@ -116,41 +128,4 @@ void administer_function()
 
 }
 
-int main()
-{
-	int a;
 
-          cout<<"\t\t-----WELCOME TO ABC BANK-------\t"<<endl<<endl;
-		  cout<<"\t\t-----------MAIN PAGE-----------\t"<<endl;
-		  cout<<"\t------------------------------------------------\t"<<endl;
-		  
-		  cout<<"\t|**PRESS 1,2 or 3 to COUNTINUE** \t\t|"<<endl;
-		  cout<<"\t|\t\t\t\t\t\t|" << endl;
-		  cout<<"\t| 1)Administer                    \t\t|"<<endl;
-		  cout<<"\t| 2)Employee                      \t\t|" << endl;
-		  cout<<"\t| 3)Customer                      \t\t|" << endl;
-          cout<<"\t|\t\t\t\t\t\t|" << endl;
-          cout<<"\t------------------------------------------------" << endl;	
-          cin>>a;
-          system("CLS");
-
-          switch(a){
-          	case 1:
-          		
-          		administer_function();
-          		
-          		break;
-          	case 2:
-          	  cout<<"Employee";
-          	  break;
-          	case 3:
-          		cout<<"Coustomer";
-          	default:
-          		cout<<"invalid";
-          		
-		  }
-          
-	
-	
-	return 0;
-}
