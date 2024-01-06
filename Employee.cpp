@@ -377,7 +377,11 @@ bool is_regular_file(const std::string& path) {
 
 void Employee_function()
 {
-	string empPassword = "Password@1234";
+	Cout<<"Adminster cpp file"<<endl;
+}
+
+int main() {
+    string empPassword = "Password@1234";
 
     Employee emp(empPassword);
     string name=emp.setEmployeeUsername();
@@ -409,9 +413,6 @@ void Employee_function()
         cerr << "Error opening folder" << endl;
     }
     
+
+    return 0;
 }
-
-
-    
-
-
